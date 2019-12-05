@@ -1,0 +1,2306 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<workbook source-build='2019.3.0 (20193.19.0821.2225)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <CascadingFilters />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <SavingAnalyticObjects />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='price_param' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='100.0'>
+        <calculation class='tableau' formula='100.0' />
+      </column>
+      <column caption='available_param' datatype='real' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='180.0'>
+        <calculation class='tableau' formula='180.0' />
+      </column>
+    </datasource>
+    <datasource caption='AB_NYC_2019' inline='true' name='federated.08d8nt30uddvjr18igysc1ugs39a' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='AB_NYC_2019' name='textscan.0wwh1xn0j335lj1de8fy91d8em4o'>
+            <connection class='textscan' directory='C:/Users/adi/Documents/capstone_airbnb/new-york-city-airbnb-open-data' filename='AB_NYC_2019.csv' password='' port='0' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0wwh1xn0j335lj1de8fy91d8em4o' name='AB_NYC_2019.csv' table='[AB_NYC_2019#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='integer' name='host_id' ordinal='2' />
+            <column datatype='string' name='host_name' ordinal='3' />
+            <column datatype='string' name='neighbourhood_group' ordinal='4' />
+            <column datatype='string' name='neighbourhood' ordinal='5' />
+            <column datatype='real' name='latitude' ordinal='6' />
+            <column datatype='real' name='longitude' ordinal='7' />
+            <column datatype='string' name='room_type' ordinal='8' />
+            <column datatype='integer' name='price' ordinal='9' />
+            <column datatype='integer' name='minimum_nights' ordinal='10' />
+            <column datatype='integer' name='number_of_reviews' ordinal='11' />
+            <column datatype='date' name='last_review' ordinal='12' />
+            <column datatype='real' name='reviews_per_month' ordinal='13' />
+            <column datatype='integer' name='calculated_host_listings_count' ordinal='14' />
+            <column datatype='integer' name='availability_365' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[host_id]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>host_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_name]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>host_name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood_group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood_group]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>neighbourhood_group</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>neighbourhood</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>room_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[room_type]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>room_type</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minimum_nights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[minimum_nights]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>minimum_nights</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number_of_reviews</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[number_of_reviews]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>number_of_reviews</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_review</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[last_review]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>last_review</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reviews_per_month</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[reviews_per_month]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>reviews_per_month</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calculated_host_listings_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calculated_host_listings_count]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>calculated_host_listings_count</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_365</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[availability_365]</local-name>
+            <parent-name>[AB_NYC_2019.csv]</parent-name>
+            <remote-alias>availability_365</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='availability &lt; 5 days' datatype='boolean' name='[Calculation_132574767171272704]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='if AVG([availability_365]) &lt; 5&#13;&#10;then   TRUE&#13;&#10;ELSE FALSE&#13;&#10;END' />
+      </column>
+      <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[price] / [minimum_nights]' />
+      </column>
+      <column caption='bnbs_per_area' datatype='real' name='[Calculation_272186355749015553]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_484981438056243201] / sum([Calculation_484981438053515264]) ) * 100' />
+      </column>
+      <column caption='Area' datatype='real' name='[Calculation_484981438053515264]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='if [neighbourhood_group] == &apos;Manhattan&apos;&#13;&#10;then 59.1&#13;&#10;ELSEIF [neighbourhood_group] == &apos;Queens&apos;&#13;&#10;then 280&#13;&#10;ELSEIF [neighbourhood_group] == &apos;Bronx&apos;&#13;&#10;then 110 &#13;&#10;ELSEIF [neighbourhood_group] == &apos;Brooklyn&apos;&#13;&#10;then 180 &#13;&#10;ELSEIF [neighbourhood_group] == &apos;Staten Island&apos;&#13;&#10;then 152&#13;&#10;end' />
+      </column>
+      <column caption='bnbs' datatype='integer' name='[Calculation_484981438056243201]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([id])' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[host_id]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[host_name]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='None' caption='minimum_nights (bin)' datatype='integer' name='[minimum_nights (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[minimum_nights]' peg='0' size='40' />
+      </column>
+      <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+      <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+      <column datatype='real' name='[reviews_per_month]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[room_type]' role='dimension' type='nominal' />
+      <column-instance column='[host_name]' derivation='Attribute' name='[attr:host_name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+      <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+      <group caption='low price and high availability ' delimiter=',' name='[Set 1]' name-style='unqualified'>
+        <groupfilter function='intersection'>
+          <groupfilter field='[high avail low price]' function='reference' />
+          <groupfilter field='[high avail  (copy)]' function='reference' />
+        </groupfilter>
+      </group>
+      <group caption='low price' name='[high avail  (copy)]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter expression='(AVG([Calculation_132574767176544257]) &lt; [Parameters].[Parameter 1])' function='filter' user:ui-marker='filter-by'>
+          <groupfilter function='level-members' level='[neighbourhood_group]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        </groupfilter>
+      </group>
+      <group caption='high avail ' name='[high avail low price]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter expression='(AVG([availability_365]) &gt; [Parameters].[Parameter 2])' function='filter' user:ui-marker='filter-by'>
+          <groupfilter function='level-members' level='[neighbourhood_group]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        </groupfilter>
+      </group>
+      <mapped-images>
+        <mapped-image caption='New_York_City_' expression='file:Image/New_York_City_.png' name='[MappedImage1]'>
+          <mapping bottom='0.0' left='0.0' right='100.0' top='100.0' x='[longitude]' y='[latitude]' />
+        </mapped-image>
+      </mapped-images>
+      <drill-paths>
+        <drill-path name='neighbourhood_group, neighbourhood'>
+          <field>[neighbourhood_group]</field>
+          <field>[neighbourhood]</field>
+        </drill-path>
+      </drill-paths>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Datasources/AB_NYC_2019.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='11/09/2019 07:06:09 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='AB_NYC_2019' increment-value='%null%' refresh-type='create' rows-inserted='48895' timestamp-start='2019-11-09 07:06:09.502' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48895</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>44029</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[host_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18830</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5811</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neighbourhood_group</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[neighbourhood_group]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>neighbourhood_group</remote-alias>
+              <ordinal>4</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neighbourhood</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[neighbourhood]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>neighbourhood</remote-alias>
+              <ordinal>5</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>290</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>latitude</remote-alias>
+              <ordinal>6</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16383</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>longitude</remote-alias>
+              <ordinal>7</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13146</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>room_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[room_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>room_type</remote-alias>
+              <ordinal>8</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price</remote-alias>
+              <ordinal>9</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>759</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>minimum_nights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[minimum_nights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>minimum_nights</remote-alias>
+              <ordinal>10</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>number_of_reviews</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[number_of_reviews]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>number_of_reviews</remote-alias>
+              <ordinal>11</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>489</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last_review</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[last_review]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>last_review</remote-alias>
+              <ordinal>12</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1764</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>reviews_per_month</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[reviews_per_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>reviews_per_month</remote-alias>
+              <ordinal>13</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1333</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calculated_host_listings_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calculated_host_listings_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>calculated_host_listings_count</remote-alias>
+              <ordinal>14</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>83</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>availability_365</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[availability_365]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>availability_365</remote-alias>
+              <ordinal>15</ordinal>
+              <family>AB_NYC_2019.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>900</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.436975' group-percentage='0.109244' measure-ordering='alphabetic' measure-percentage='0.380952' parameter-percentage='0.0728291' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:neighbourhood_group:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Bronx&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Staten Island&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Queens&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Manhattan&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Brooklyn&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:AdhocCluster:1:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:room_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Entire home/apt&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Shared room&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Private room&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='price_param' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='100.0'>
+          <calculation class='tableau' formula='100.0' />
+        </column>
+        <column caption='available_param' datatype='real' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='180.0'>
+          <calculation class='tableau' formula='180.0' />
+        </column>
+      </datasource-dependencies>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{7c031456-120b-4323-9c7d-a2e831499acd}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' />
+            <field name='[federated.08d8nt30uddvjr18igysc1ugs39a].[attr:host_name:nk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Average_price_neighbour_hood_group'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Price per night vs neighbourhood group</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column datatype='string' name='[room_type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:room_type:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]</cols>
+      </table>
+      <simple-id uuid='{90C1E146-FAD5-4964-BC8A-8B43EAE41FAF}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>count of room types</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column caption='bnbs' datatype='integer' name='[Calculation_484981438056243201]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([id])' />
+            </column>
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_484981438056243201]' derivation='User' name='[usr:Calculation_484981438056243201:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' center='45.395781894000002' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' min='48.647726028476882' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:room_type:nk]</cols>
+      </table>
+      <simple-id uuid='{94ACFEE9-E558-45B3-8E49-0E42CAEA20E3}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>distribution of nights stayed</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+            <column-instance column='[availability_365]' derivation='Avg' name='[avg:availability_365:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[minimum_nights]' derivation='Avg' name='[avg:minimum_nights:qk]' pivot='key' type='quantitative' />
+            <column aggregation='None' caption='minimum_nights (bin)' datatype='integer' name='[minimum_nights (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[minimum_nights]' peg='0' size='40' />
+            </column>
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column-instance column='[minimum_nights (bin)]' derivation='None' name='[none:minimum_nights (bin):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' palette='green_blue_diverging_10_0' symmetric='false' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:minimum_nights:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:minimum_nights (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[minimum_nights (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{75F13993-73D3-4264-A1A7-67506E093A88}' />
+    </worksheet>
+    <worksheet name='Sheet 12'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Reviews generated trend</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column datatype='date' name='[last_review]' role='dimension' type='ordinal' />
+            <column-instance column='[reviews_per_month]' derivation='None' name='[none:reviews_per_month:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[number_of_reviews]' role='measure' type='quantitative' />
+            <column datatype='real' name='[reviews_per_month]' role='dimension' type='quantitative' />
+            <column-instance column='[number_of_reviews]' derivation='Sum' name='[sum:number_of_reviews:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[last_review]' derivation='Year-Trunc' name='[tyr:last_review:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:reviews_per_month:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:reviews_per_month:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[tyr:last_review:qk]' scope='cols' value='review generated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[sum:number_of_reviews:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[tyr:last_review:qk]</cols>
+      </table>
+      <simple-id uuid='{7A23900A-09D6-4270-9330-7FB635A427AF}' />
+    </worksheet>
+    <worksheet name='Sheet 13'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([Calculation_132574767176544257])' function='order' user:ui-marker='order'>
+                <groupfilter function='member' level='[none:neighbourhood_group:nk]' member='&quot;Manhattan&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]</rows>
+        <cols>([federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk] / [federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood:nk])</cols>
+      </table>
+      <simple-id uuid='{962AE921-7738-4885-8032-9479CA89D8DE}' />
+    </worksheet>
+    <worksheet name='Sheet 14'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>HIgh Availability and low prices </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='price_param' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='100.0'>
+              <calculation class='tableau' formula='100.0' />
+            </column>
+            <column caption='available_param' datatype='real' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='180.0'>
+              <calculation class='tableau' formula='180.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+            <column-instance column='[price]' derivation='Median' name='[med:price:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[Set 1]' />
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.08d8nt30uddvjr18igysc1ugs39a].[med:price:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[Set 1]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[med:price:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood:nk]</cols>
+      </table>
+      <simple-id uuid='{860DA83E-808E-4FBF-A3B4-D1997163D803}' />
+    </worksheet>
+    <worksheet name='Sheet 15'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>what people like to rent for duration more than 1 year?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='bnbs' datatype='integer' name='[Calculation_484981438056243201]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([id])' />
+            </column>
+            <column datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+            <column-instance column='[availability_365]' derivation='Avg' name='[avg:availability_365:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[minimum_nights]' derivation='None' name='[none:minimum_nights:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_484981438056243201]' derivation='User' name='[usr:Calculation_484981438056243201:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:minimum_nights:qk]' included-values='in-range'>
+            <min>365</min>
+          </filter>
+          <filter class='categorical' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:neighbourhood_group:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:neighbourhood_group:nk]' member='&quot;Bronx&quot;' />
+                <groupfilter function='member' level='[none:neighbourhood_group:nk]' member='&quot;Brooklyn&quot;' />
+                <groupfilter function='member' level='[none:neighbourhood_group:nk]' member='&quot;Staten Island&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:room_type:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]' shelf='columns' />
+            <shelf-sort-v2 dimension-to-sort='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' direction='DESC' measure-to-sort-by='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:minimum_nights:qk]</column>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]</rows>
+        <cols>([federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk] / [federated.08d8nt30uddvjr18igysc1ugs39a].[none:room_type:nk])</cols>
+      </table>
+      <simple-id uuid='{2AA2E502-999F-4F49-85EF-942DEF28C5E2}' />
+    </worksheet>
+    <worksheet name='Sheet 16'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[host_name]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[host_name]' derivation='None' name='[none:host_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:host_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:host_name:nk]</cols>
+      </table>
+      <simple-id uuid='{6C691EC2-A20A-4B02-B293-59339C1095E0}' />
+    </worksheet>
+    <worksheet name='Sheet 17'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[availability_365]' derivation='Avg' name='[avg:availability_365:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[host_name]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[host_name]' derivation='None' name='[none:host_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column datatype='string' name='[room_type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]'>
+            <groupfilter function='level-members' level='[none:neighbourhood_group:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:room_type:nk]' />
+              <lod column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:host_name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.62569057941436768' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]</cols>
+      </table>
+      <simple-id uuid='{958E1BE4-5D41-4743-BBB2-E7B500556982}' />
+    </worksheet>
+    <worksheet name='Sheet 18'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Types of guest as seen from nights stayed and type of room booked</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column aggregation='None' caption='minimum_nights (bin)' datatype='integer' name='[minimum_nights (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[minimum_nights]' peg='0' size='40' />
+            </column>
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[minimum_nights (bin)]' derivation='None' name='[none:minimum_nights (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column datatype='string' name='[room_type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:minimum_nights (bin):ok]' value='144' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' palette='red_black_white_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' />
+              <lod column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='3.3480663299560547' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:minimum_nights (bin):ok]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:room_type:nk]</cols>
+      </table>
+      <simple-id uuid='{09F00077-5214-41AA-A191-BEE332E7C100}' />
+    </worksheet>
+    <worksheet name='Sheet 19'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5F433D65-22F8-4D81-86F7-D23AD6D51BFE}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Price Per Night</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column caption='bnbs' datatype='integer' name='[Calculation_484981438056243201]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([id])' />
+            </column>
+            <column-instance column='[neighbourhood_group]' derivation='Attribute' name='[attr:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[latitude]' derivation='Avg' name='[avg:latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[longitude]' derivation='Avg' name='[avg:longitude:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column aggregation='Avg' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[Calculation_132574767176544257]' derivation='Median' name='[med:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_484981438056243201]' derivation='User' name='[usr:Calculation_484981438056243201:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' center='80.0' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[med:Calculation_132574767176544257:qk]' palette='orange_blue_diverging_10_0' reverse='true' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[med:Calculation_132574767176544257:qk]' />
+              <size column='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]' />
+              <lod column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood:nk]' />
+              <tooltip column='[federated.08d8nt30uddvjr18igysc1ugs39a].[attr:neighbourhood_group:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.1988949775695801' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:latitude:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{672998C6-69F7-4655-BB00-46DD36CAFB76}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Costly Neighbourhood groups</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column caption='Area' datatype='real' name='[Calculation_484981438053515264]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='if [neighbourhood_group] == &apos;Manhattan&apos;&#13;&#10;then 59.1&#13;&#10;ELSEIF [neighbourhood_group] == &apos;Queens&apos;&#13;&#10;then 280&#13;&#10;ELSEIF [neighbourhood_group] == &apos;Bronx&apos;&#13;&#10;then 110 &#13;&#10;ELSEIF [neighbourhood_group] == &apos;Brooklyn&apos;&#13;&#10;then 180 &#13;&#10;ELSEIF [neighbourhood_group] == &apos;Staten Island&apos;&#13;&#10;then 152&#13;&#10;end' />
+            </column>
+            <column-instance column='[Calculation_484981438053515264]' derivation='Attribute' name='[attr:Calculation_484981438053515264:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+            <column-instance column='[availability_365]' derivation='Avg' name='[avg:availability_365:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_132574767176544257]' derivation='Median' name='[med:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[availability_365]' derivation='Median' name='[med:availability_365:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_484981438053515264]' derivation='None' name='[none:Calculation_484981438053515264:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_484981438053515264]' derivation='Sum' name='[sum:Calculation_484981438053515264:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[attr:Calculation_484981438053515264:qk]' included-values='all' />
+          <filter class='categorical' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[sum:Calculation_484981438053515264:ok]'>
+            <groupfilter function='level-members' level='[sum:Calculation_484981438053515264:ok]' />
+          </filter>
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[sum:Calculation_484981438053515264:ok]</column>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[attr:Calculation_484981438053515264:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' palette='blue_teal_10_0' reverse='true' type='interpolated' />
+            <encoding attr='color' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[med:availability_365:qk]' palette='blue_teal_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.08d8nt30uddvjr18igysc1ugs39a].[attr:Calculation_484981438053515264:qk]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:Calculation_484981438053515264:ok]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[med:Calculation_132574767176544257:qk]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[med:availability_365:qk]' />
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]</run>
+                <run>&gt;&#10;&lt;</run>
+                <run>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:Calculation_484981438053515264:ok]</run>
+                <run>&gt; km sqr&#10;&lt;</run>
+                <run>[federated.08d8nt30uddvjr18igysc1ugs39a].[med:Calculation_132574767176544257:qk]</run>
+                <run>&gt; $ per night&#10;</run>
+                <run>&lt;[federated.08d8nt30uddvjr18igysc1ugs39a].[med:availability_365:qk]&gt;</run>
+                <run> days</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5226696A-BA73-45D7-8BBD-C5777CD1A128}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Reviews based on weekdays</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column datatype='date' name='[last_review]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[number_of_reviews]' role='measure' type='quantitative' />
+            <column-instance column='[number_of_reviews]' derivation='Sum' name='[sum:number_of_reviews:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[last_review]' derivation='Weekday' name='[wd:last_review:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]'>
+            <groupfilter from='&quot;Bronx&quot;' function='range' level='[none:neighbourhood_group:nk]' to='&quot;Staten Island&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[wd:last_review:ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[wd:last_review:ok]' />
+              <groupfilter function='member' level='[wd:last_review:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]</column>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[wd:last_review:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[sum:number_of_reviews:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[wd:last_review:ok]</cols>
+      </table>
+      <simple-id uuid='{2853CD08-B914-452A-91D3-95AF1D4E87A1}' />
+    </worksheet>
+    <worksheet name='Sheet 5 (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>High Prices on weekends</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column datatype='date' name='[last_review]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[last_review]' derivation='Weekday' name='[wd:last_review:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Manhattan&quot;</bucket>
+              <bucket>&quot;Brooklyn&quot;</bucket>
+              <bucket>&quot;Bronx&quot;</bucket>
+              <bucket>&quot;Queens&quot;</bucket>
+              <bucket>&quot;Staten Island&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[wd:last_review:ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[wd:last_review:ok]' />
+              <groupfilter function='member' level='[wd:last_review:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[wd:last_review:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' field-type='quantitative' max='91.261685513384563' min='30.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[wd:last_review:ok]</cols>
+      </table>
+      <simple-id uuid='{5017A842-7706-490F-9CB8-11E067D13F81}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>bnbs in neighbourhood group</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column caption='bnbs' datatype='integer' name='[Calculation_484981438056243201]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([id])' />
+            </column>
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_484981438056243201]' derivation='User' name='[usr:Calculation_484981438056243201:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]</cols>
+      </table>
+      <simple-id uuid='{4F883A1E-278D-4E85-9068-A9BAAF68473A}' />
+    </worksheet>
+    <worksheet name='availability '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Highly popular places  based on avaialability&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+            <column-instance column='[availability_365]' derivation='Avg' name='[avg:availability_365:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[latitude]' derivation='Avg' name='[avg:latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[longitude]' derivation='Avg' name='[avg:longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[price]' derivation='Avg' name='[avg:price:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+            <column-instance column='[availability_365]' derivation='None' name='[none:availability_365:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[neighbourhood]' derivation='None' name='[none:neighbourhood:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:availability_365:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>5</max>
+          </filter>
+          <slices>
+            <column>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:availability_365:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' center='185.0' field='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:price:qk]' max='750.0' min='20.0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:price:qk]' />
+              <lod column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood:nk]' />
+              <tooltip column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:latitude:qk]</rows>
+        <cols>[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{54627FB9-FEF4-4B1F-A044-E8EA2A9720E0}' />
+    </worksheet>
+    <worksheet name='bnb density'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>BNB DENSITY (BNBs / 100km2)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AB_NYC_2019' name='federated.08d8nt30uddvjr18igysc1ugs39a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08d8nt30uddvjr18igysc1ugs39a'>
+            <column caption='price_per_night' datatype='real' name='[Calculation_132574767176544257]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[price] / [minimum_nights]' />
+            </column>
+            <column caption='bnbs_per_area' datatype='real' name='[Calculation_272186355749015553]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([Calculation_484981438056243201] / sum([Calculation_484981438053515264]) ) * 100' />
+            </column>
+            <column caption='Area' datatype='real' name='[Calculation_484981438053515264]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='if [neighbourhood_group] == &apos;Manhattan&apos;&#13;&#10;then 59.1&#13;&#10;ELSEIF [neighbourhood_group] == &apos;Queens&apos;&#13;&#10;then 280&#13;&#10;ELSEIF [neighbourhood_group] == &apos;Bronx&apos;&#13;&#10;then 110 &#13;&#10;ELSEIF [neighbourhood_group] == &apos;Brooklyn&apos;&#13;&#10;then 180 &#13;&#10;ELSEIF [neighbourhood_group] == &apos;Staten Island&apos;&#13;&#10;then 152&#13;&#10;end' />
+            </column>
+            <column caption='bnbs' datatype='integer' name='[Calculation_484981438056243201]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([id])' />
+            </column>
+            <column-instance column='[Calculation_132574767176544257]' derivation='Avg' name='[avg:Calculation_132574767176544257:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column datatype='string' name='[neighbourhood_group]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_group]' derivation='None' name='[none:neighbourhood_group:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_272186355749015553]' derivation='User' name='[usr:Calculation_272186355749015553:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_272186355749015553:qk]' />
+              <tooltip column='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_272186355749015553:qk]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_272186355749015553:qk]' />
+              <text column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' />
+              <color column='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]</run>
+                <run>&gt;&#10;&lt;</run>
+                <run>[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_272186355749015553:qk]</run>
+                <run>&gt; bnb/100km2</run>
+                <run>Æ&#10;</run>
+                <run>&lt;[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{53C8B576-DE66-41DF-848D-42EFA3C2AA78}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='37'>
+    <window class='worksheet' name='availability ' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:availability_365:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:price:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CEF28F84-BF74-48D0-914B-443542DB99EF}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[med:Calculation_132574767176544257:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[usr:Calculation_484981438056243201:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7E30FDEA-F6B6-45CD-BBA2-85FF5E7BD4D8}' />
+    </window>
+    <window class='worksheet' name='Sheet 14'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{F74C70F8-9AE5-433C-B1DF-4414309D6593}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{F54D253A-C483-43AC-BAC3-1F5C91DBD077}' />
+    </window>
+    <window class='worksheet' name='Average_price_neighbour_hood_group'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{5F76BD14-2CDD-4EE0-A620-104AC06EB651}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{DE35DEA7-30DA-4677-A112-8C98C19F818F}' />
+    </window>
+    <window class='worksheet' name='Sheet 5 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{D7919304-9C86-47E4-8962-4970B582D9CF}' />
+    </window>
+    <window class='worksheet' maximized='true' name='bnb density'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{5817DAF0-DD4E-47D3-A92B-74B77865527C}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C01BEC7B-6220-4FDF-B04D-3D56AA157254}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{569B2377-496A-4237-A467-90048303A5B7}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{EC9B1FF4-EE89-4D6F-AC0D-581EFF8D6513}' />
+    </window>
+    <window class='worksheet' name='Sheet 15'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:minimum_nights:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:availability_365:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{52DA6294-0AA7-482C-AEBA-DD7FA4339108}' />
+    </window>
+    <window class='worksheet' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C32885F7-6DC2-4127-BFFC-AE38E0140DF6}' />
+    </window>
+    <window class='worksheet' name='Sheet 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{65F1365C-9779-4737-BF08-BD7006BEEBED}' />
+    </window>
+    <window class='worksheet' name='Sheet 16'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{79154C21-8366-4106-AC74-F36699EF901A}' />
+    </window>
+    <window class='worksheet' name='Sheet 17'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:neighbourhood_group:nk]' type='filter' values='cascading' />
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[none:room_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{AF220DF6-F417-4AD2-9783-1C5474F7D2D8}' />
+    </window>
+    <window class='worksheet' name='Sheet 18'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08d8nt30uddvjr18igysc1ugs39a].[avg:Calculation_132574767176544257:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{D2D69D62-76C6-41F0-B1C0-2282546B564B}' />
+    </window>
+    <window class='worksheet' name='Sheet 19'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{CCD887DB-D7E2-40F5-9788-C505F3B2976F}' />
+    </window>
+  </windows>
+</workbook>
